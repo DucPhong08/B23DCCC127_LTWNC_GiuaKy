@@ -1,0 +1,137 @@
+.panel {
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.counter {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.track {
+  height: 4px;
+  margin: 12px 0 16px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--surface-muted);
+}
+
+.fill {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.full .fill {
+  background: var(--danger);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 24px 16px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.emptyTitle {
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+.emptyText {
+  color: var(--text-muted);
+  font-size: 12.5px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.item:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -1px;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  background: var(--tone);
+}
+
+.itemText {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTitle,
+.itemAuthor {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.itemAuthor {
+  color: var(--text-muted);
+  font-size: 12.5px;
+}
+
+.rule {
+  margin-top: 14px;
+  color: var(--text-subtle);
+  font-size: 12.5px;
+}
